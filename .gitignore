@@ -1,0 +1,6 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.buildpath
+.DS_Store
