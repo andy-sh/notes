@@ -2,6 +2,8 @@
 
 <!--[toc]-->
 
+**作者**：[https://github.com/andy-sh/notes/blob/master/python.md](https://github.com/andy-sh/notes/blob/master/python.md)
+
 ## 资源
 - [free-programming-books-cn](https://github.com/justjavac/free-programming-books-zh_CN#python)
 - [Python简介](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
@@ -130,6 +132,11 @@ Python can be used in so many different projects. If you're a programmer looking
 #### mac
 
 `brew install python3`
+
+注意：
+
+- python3路径： `/usr/local/Cellar/python3/3.6.1/bin`
+- eclipse的pydev配置需要支持python3需要自己添加python3的路径。
 
 ### Shell操作
 
@@ -278,6 +285,49 @@ def my_abs(x):
 
 之所以我们说，private函数和变量“不应该”被直接引用，而不是“不能”被直接引用，是因为Python并没有一种方法可以完全限制访问private函数或变量，但是，从编程习惯上不应该引用private函数或变量。
 
+### 错误处理(try...except...finally)
+
+```python
+try:
+    print('try...')
+    r = 10 / 0
+    print('result:', r)
+except ZeroDivisionError as e:
+    print('except:', e)
+finally:
+    print('finally...')
+print('END')
+
+try:
+    print('try...')
+    r = 10 / int('2')
+    print('result:', r)
+except ValueError as e:
+    print('ValueError:', e)
+except ZeroDivisionError as e:
+    print('ZeroDivisionError:', e)
+else:
+    print('no error!')
+finally:
+    print('finally...')
+print('END')
+```
+
+### 抛出错误(raise)
+
+```python
+# err_raise.py
+class FooError(ValueError):
+    pass
+
+def foo(s):
+    n = int(s)
+    if n==0:
+        raise FooError('invalid value: %s' % s)
+    return 10 / n
+
+foo('0')
+```
 
 ## 基本概念
 
@@ -1010,3 +1060,311 @@ def fact(n):
     return n * fact(n - 1)
 ```
 
+## OO编程
+
+class后面紧接着是类名，即Student，类名通常是大写开头的单词，紧接着是(object)，表示该类是从哪个类继承下来的，通常，如果没有合适的继承类，就使用object类，这是所有类最终都会继承的类。
+
+```python
+class Student(object):
+    pass
+```
+
+可以自由地给一个实例变量绑定属性，比如，给实例bart绑定一个name属性：
+
+```python
+>>> bart = Student()
+>>> bart.name = 'Bart Simpson'
+>>> bart.name
+'Bart Simpson'
+```
+
+由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的`__init__`方法，在创建实例的时候，就把name，score等属性绑上去：
+
+```python
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+```
+
+注意到`__init__`方法的第一个参数永远是self，表示创建的实例本身，因此，在`__init__`方法内部，就可以把各种属性绑定到self，因为self就指向创建的实例本身。
+
+有了`__init__`方法，在创建实例的时候，就不能传入空的参数了，必须传入与`__init__`方法匹配的参数，但self不需要传，Python解释器自己会把实例变量传进去：
+
+```python
+>>> bart = Student('Bart Simpson', 59)
+>>> bart.name
+'Bart Simpson'
+>>> bart.score
+59
+```
+
+和普通的函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是实例变量`self`，并且，调用时，不用传递该参数。除此之外，类的方法和普通函数没有什么区别，所以，你仍然可以用默认参数、可变参数、关键字参数和命名关键字参数。
+
+```python
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+    
+    def get_grade(self):
+        if self.score >= 90:
+            return 'A'
+        elif self.score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
+>>> bart.print_score()
+Bart Simpson: 59
+>>> bart.get_grade()
+'C'
+```
+
+### 访问限制
+
+从前面Student类的定义来看，外部代码还是可以自由地修改一个实例的name、score属性：
+
+```python
+>>> bart = Student('Bart Simpson', 98)
+>>> bart.score
+98
+>>> bart.score = 59
+>>> bart.score
+59
+```
+
+如果要让内部属性不被外部访问，可以把属性的名称前加上两个下划线`__`，在Python中，实例的变量名如果以`__`开头，就变成了一个私有变量（private），只有内部可以访问，外部不能访问，所以，我们把Student类改一改：
+
+```python
+class Student(object):
+
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.__name, self.__score))
+```
+    
+改完后，对于外部代码来说，没什么变动，但是已经无法从外部访问实例变量.__name和实例变量.__score了：
+
+```python
+>>> bart = Student('Bart Simpson', 98)
+>>> bart.__name
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Student' object has no attribute '__name'
+```
+
+这样就确保了外部代码不能随意修改对象内部的状态，这样通过访问限制的保护，代码更加健壮。
+
+需要注意的是，在Python中，变量名类似`__xxx__`的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用`__name__`、`__score__`这样的变量名。
+
+有些时候，你会看到以一个下划线开头的实例变量名，比如`_name`，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
+
+双下划线开头的实例变量是不是一定不能从外部访问呢？其实也不是。不能直接访问`__name`是因为Python解释器对外把`__name`变量改成了`_Student__name`，所以，仍然可以通过_Student__name来访问__name变量。
+
+**总的来说就是，Python本身没有任何机制阻止你干坏事，一切全靠自觉。**
+
+### 继承和多态
+
+在OOP程序设计中，当我们定义一个class的时候，可以从某个现有的class继承，新的class称为子类（Subclass），而被继承的class称为基类、父类或超类（Base class、Super class）。
+
+当子类和父类都存在相同的run()方法时，我们说，子类的run()覆盖了父类的run()，在代码运行的时候，总是会调用子类的run()。这样，我们就获得了继承的另一个好处：多态。
+
+```python
+class Animal(object):
+    def run(self):
+        print('Animal is running...')
+
+class Dog(Animal):
+    
+    def run(self):
+        print('Dog is running...')
+        
+    def eat(self):
+        print('Eating meat...')
+
+class Cat(Animal):
+    
+    def run(self):
+        print('Cat is running...')
+
+
+
+```
+
+### 鸭子类型（duck typing）
+
+在程序设计中，鸭子类型（英语：duck typing）是动态类型的一种风格。在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由"当前方法和属性的集合"决定。这个概念的名字来源于由James Whitcomb Riley提出的鸭子测试，“鸭子测试”可以这样表述：
+
+“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”
+
+```
+Alex Martelli很早（2000年）就在发布到comp.lang.python新闻组上的一则消息中使用了这一术语。他同时对鸭子测试的错误的字面理解提出了提醒，以避免人们错误认为这个术语已经被使用。
+
+“换言之，不要检查它是不是一个鸭子：检查它像不像一个鸭子地叫，等等。取决于你需要哪个像鸭子的行为的子集来使用语言。”
+```
+
+对于静态语言（例如Java）来说，如果需要传入`Animal`类型，则传入的对象必须是`Animal`类型或者它的子类，否则，将无法调用`run()`方法。
+
+对于Python这样的动态语言来说，则不一定需要传入`Animal`类型。我们只需要保证传入的对象有一个`run()`方法就可以了。
+
+```python
+class Duck:
+    def quack(self): 
+        print ("這鴨子在呱呱叫")
+    def feathers(self): 
+        print ("這鴨子擁有白色與灰色羽毛")
+ 
+class Person:
+    def quack(self):
+        print ("這人正在模仿鴨子")
+    def feathers(self): 
+        print ("這人在地上拿起1根羽毛然後給其他人看")
+ 
+def in_the_forest(duck):
+    duck.quack()
+    duck.feathers()
+ 
+def game():
+    donald = Duck()
+    john = Person()
+    in_the_forest(donald)
+    in_the_forest(john)
+
+game()
+```
+
+#### 批评
+
+关于鸭子类型常常被引用的一个批评是它要求程序员在任何时候都必须很好地理解他/她正在编写的代码。在一个强静态类型的、使用了类型继承树和参数类型检查的语言中，给一个类提供未预测的对象类型更为困难。例如，在Python中，你可以创建一个称为Wine的类，并在其中需要实现press方法。然而，一个称为Trousers的类可能也实现press()方法。为了避免奇怪的、难以检测的错误，开发者在使用鸭子类型时需要意识到每一个“press”方法的可能使用，即使在语义上和他/她所正在编写工作的代码没有任何关系。
+
+本质上，问题是：“如果它走起来像鸭子并且叫起来像鸭子”，它也可以是一只正在模仿鸭子的龙。尽管它们可以模仿鸭子，但也许你不总是想让龙进入池塘。
+
+鸭子类型的提倡者，如吉多·范罗苏姆，认为这个问题可以通过在测试和维护代码库前拥有足够的了解来解决。
+
+对鸭子类型的批评倾向于成为关于动态类型和静态类型的争论的更广阔的观点的特殊情形。
+
+### Mixin
+
+在设计类的继承关系时，通常，主线都是单一继承下来的，例如，Ostrich继承自Bird。但是，如果需要“混入”额外的功能，通过多重继承就可以实现，比如，让Ostrich除了继承自Bird外，再同时继承Runnable。这种设计通常称之为MixIn。
+
+Mixin 就是混入的意思。和多重继承类似（其实可以把 Mixin 看作多重继承的一种在特定场景下的应用），但通常混入 Mixin 的类和 Mixin 类本身不是 is-a 的关系，混入 Mixin 类是为了添加某些（可选的）功能。自由地混入 Mixin 类就可以灵活地为被混入的类添加不同的功能。
+
+为了更好地看出继承关系，我们把Runnable和Flyable改为RunnableMixIn和FlyableMixIn。类似的，你还可以定义出肉食动物CarnivorousMixIn和植食动物HerbivoresMixIn，让某个动物同时拥有好几个MixIn：
+
+```python
+class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):
+    pass
+```
+    
+MixIn的目的就是给一个类增加多个功能，这样，在设计类的时候，我们优先考虑通过多重继承来组合多个MixIn的功能，而不是设计多层次的复杂的继承关系。
+
+谈到Mixin就不得不谈到多重继承，因为Mixin的出现就是为了解决多重继承的问题，那么多重继承有什么问题呢？
+
+在《松本行弘的程序世界》一书中，作者列举了以下三点：
+
+- 结构复杂化：如果是单一继承，一个类的父类是什么，父类的父类是什么，都很明确，因为只有单一的继承关系，然而如果是多重继承的话，一个类有多个父类，这些父类又有自己的父类，那么类之间的关系就很复杂了。
+- 优先顺序模糊：假如我有A，C类同时继承了基类，B类继承了A类，然后D类又同时继承了B和C类，所以D类继承父类的方法的顺序应该是D、B、A、C还是D、B、C、A，或者是其他的顺序，很不明确。
+- 功能冲突：因为多重继承有多个父类，所以当不同的父类中有相同的方法是就会产生冲突。如果B类和C类同时又有相同的方法时，D继承的是哪个方法就不明确了，因为存在两种可能性。
+
+所以为能够利用多继承的优点又解决多继承的问题，提出了规格继承和实现继承这两样东西。
+
+- 规格继承：指的是一堆方法名的集合，而实现继承除了方法名还允许有方法的实现。Java 选择了规格继承，在 Java 中叫 interface（不过Java8中已经有默认方法了）。
+- 实现继承：也可以叫Mixin。从某种程度上来说，继承强调 I am，Mixin 强调 I can。
+
+Mixin 实质上是利用语言特性（比如 Ruby 的 include 语法、Python 的多重继承）来更简洁地实现组合模式。
+
+在使用的时候一般把mixin的类放在父类的右边似乎也是为了强调这并不是典型的多继承，是一种特殊的多继承，而是在继承了一个基类的基础上，顺带利用多重继承的功能给这个子类添点料，增加一些其他的功能。保证Mixin的类功能单一具体，混入之后，新的类的MRO树其实也会相对很简单，并不会引起混乱。
+
+#### [关于Python的Mixin模式](http://www.bjhee.com/python-mixin.html)
+
+像C或C++这类语言都支持多重继承，一个子类可以有多个父类，这样的设计常被人诟病。因为继承应该是个”is-a”关系。比如轿车类继承交通工具类，因为轿车是一个(“is-a”)交通工具。一个物品不可能是多种不同的东西，因此就不应该存在多重继承。不过有没有这种情况，一个类的确是需要继承多个类呢？
+
+答案是有，我们还是拿交通工具来举例子，民航飞机是一种交通工具，对于土豪们来说直升机也是一种交通工具。对于这两种交通工具，它们都有一个功能是飞行，但是轿车没有。所以，我们不可能将飞行功能写在交通工具这个父类中。但是如果民航飞机和直升机都各自写自己的飞行方法，又违背了代码尽可能重用的原则（如果以后飞行工具越来越多，那会出现许多重复代码）。怎么办，那就只好让这两种飞机同时继承交通工具以及飞行器两个父类，这样就出现了多重继承。这时又违背了继承必须是”is-a”关系。这个难题该怎么破？
+
+不同的语言给出了不同的方法，让我们先来看下Java。Java提供了接口interface功能，来实现多重继承：
+
+```java
+public abstract class Vehicle {
+}
+ 
+public interface Flyable {
+    public void fly();
+}
+ 
+public class FlyableImpl implements Flyable {
+    public void fly() {
+        System.out.println("I am flying");
+    }
+} 
+ 
+public class Airplane extends Vehicle implements Flyable {
+    private flyable;
+ 
+    public Airplane() {
+        flyable = new FlyableImpl();
+    }
+ 
+    public void fly() {
+        flyable.fly();
+    }
+}
+```
+
+现在我们的飞机同时具有了交通工具及飞行器两种属性，而且我们不需要重写飞行器中的飞行方法，同时我们没有破坏单一继承的原则。飞机就是一种交通工具，可飞行的能力是是飞机的属性，通过继承接口来获取。
+
+回到主题，Python语言可没有接口功能，但是它可以多重继承。那Python是不是就该用多重继承来实现呢？是，也不是。说是，因为从语法上看，的确是通过多重继承实现的。说不是，因为它的继承依然遵守”is-a”关系，从含义上看依然遵循单继承的原则。这个怎么理解呢？我们还是看例子吧。
+
+```python
+class Vehicle(object):
+    pass
+ 
+class PlaneMixin(object):
+    def fly(self):
+        print 'I am flying'
+ 
+class Airplane(Vehicle, PlaneMixin):
+    pass
+```
+
+可以看到，上面的Airplane类实现了多继承，不过它继承的第二个类我们起名为PlaneMixin，而不是Plane，这个并不影响功能，但是会告诉后来读代码的人，这个类是一个Mixin类。所以从含义上理解，Airplane只是一个Vehicle，不是一个Plane。这个Mixin，表示混入(mix-in)，它告诉别人，这个类是作为功能添加到子类中，而不是作为父类，它的作用同Java中的接口。
+
+使用Mixin类实现多重继承要非常小心
+
+- 首先它必须表示某一种功能，而不是某个物品，如同Java中的Runnable，Callable等
+其次它必须责任单一，如果有多个功能，那就写多个Mixin类
+- 然后，它不依赖于子类的实现
+- 最后，子类即便没有继承这个Mixin类，也照样可以工作，就是缺少了某个功能。（比如飞机照样可以载客，就是不能飞了^_^）
+
+另外提一下，ReactJS也有Mixin功能，而且语法很简洁：
+
+```js
+var PlaneMixin = function() {
+  return {
+    fly: function() {
+      console.log('I am flying');
+    }
+  }
+}
+ 
+var AirplaneComponent = React.createClass({
+  mixins: [PlaneMixin()],
+  render: function() {
+    return '<h1>Hello</h1>';
+  }
+});
+```
+
+#### Python的方法解析顺序(MRO)
+
+对于支持继承的编程语言来说，其方法（属性）可能定义在当前类，也可能来自于基类，所以在方法调用时就需要对当前类和基类进行搜索以确定方法所在的位置。而搜索的顺序就是所谓的「方法解析顺序」（Method Resolution Order，或MRO）。对于只支持单继承的语言来说，MRO 一般比较简单；而对于 Python 这种支持多继承的语言来说，MRO 就复杂很多。
+
+[Python的方法解析顺序(MRO)](http://hanjianwei.com/2013/07/25/python-mro/)
