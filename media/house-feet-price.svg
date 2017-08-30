@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="302.04" width="557.3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 557.29071 302.04245">
+<text font-size="15px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="36.789322" x="171.02226" font-family="sans-serif" xml:space="preserve" fill="#6e6e6e"><tspan y="36.789322" x="171.02226"/></text>
+<g>
+<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m-146-87.959h750.14v466.35h-750.14v-466.35z" fill="#333"/>
+<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" stroke-dasharray="3.00000823, 3.00000823" d="m213 187.04 309-129" stroke="#dcdcdc" fill="none"/>
+</g>
+<g>
+<g fill="#6e6e6e">
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" height="200" width="1" y="20" x="195.29"/>
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" transform="rotate(90)" height="350" width="1" y="-537.29" x="211"/>
+<g font-size="15px" font-family="sans-serif">
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="216.78986" x="173.01884" xml:space="preserve"><tspan y="216.78986" x="173.01884">0</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="177.96013" x="119.02226" xml:space="preserve"><tspan y="177.96013" x="119.02226">100.000</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="236.7899" x="220.63506" line-height="125%"><tspan y="236.7899" x="220.63506">500</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="278.28592" xml:space="preserve"><tspan y="236.7899" x="278.28592">1000</tspan></text>
+</g>
+</g>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="278.00238" x="308.74832" font-family="sans-serif" line-height="125%" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="278.00238" x="308.74832" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">size (in feet)</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="125.90004" x="22.011822" font-family="sans-serif" xml:space="preserve" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="125.90004" x="22.011822" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">price ($)</tspan></text>
+<g font-size="15px" font-family="sans-serif" fill="#6e6e6e">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="236.7899" x="345.4805" line-height="125%"><tspan y="236.7899" x="345.4805">1500</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="413.2244" xml:space="preserve"><tspan y="236.7899" x="413.2244">2000</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="236.7899" x="480.96817" line-height="125%"><tspan y="236.7899" x="480.96817">2500</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="131.29332" x="119.02226" line-height="125%"><tspan y="131.29332" x="119.02226">200.000</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="84.626503" x="119.02226" xml:space="preserve"><tspan y="84.626503" x="119.02226">300.000</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="37.95969" x="119.02226" line-height="125%"><tspan y="37.95969" x="119.02226">400.000</tspan></text>
+</g>
+<g fill="#aaa">
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="242.65" cy="167.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="262.65" cy="146.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="282.65" cy="136.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="312.65" cy="106.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="342.65" cy="116.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="382.65" cy="106.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="412.65" cy="116.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="422.65" cy="86.302" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="492.65" cy="86.302" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="441.65" cy="96.302" r="6"/>
+</g>
+</g>
+</svg>

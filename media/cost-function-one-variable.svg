@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="333.21" width="894.98" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 894.97501 333.21191">
+<text font-size="15px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="67.998779" x="-571.99677" font-family="sans-serif" xml:space="preserve" fill="#6e6e6e"><tspan y="67.998779" x="-571.99677"/></text>
+<g transform="translate(-743.02 31.209)">
+<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m718-51.959h956.14v374.35h-956.14v-374.35z" fill="#333"/>
+</g>
+<g transform="translate(-743.02 31.209)">
+<path d="m856.02 211.8 245-0.00001" stroke="#aaa" stroke-dasharray="3.00000849, 3.00000849" fill="none"/>
+<g fill="#6e6e6e">
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" height="200" width="1" y="21.042" x="856"/>
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" transform="rotate(90)" height="200" width="1" y="-1048" x="211.3"/>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="15px" y="236.78992" x="834.01984" font-family="sans-serif" line-height="125%"><tspan y="236.78992" x="834.01984">0</tspan></text>
+<text font-size="15px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="896.41449" font-family="sans-serif" xml:space="preserve"><tspan y="236.7899" x="896.41449">1</tspan></text>
+</g>
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="278.00238" x="943.6192" font-family="sans-serif" xml:space="preserve" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="278.00238" x="943.6192" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">x</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="127.18195" x="763.01331" font-family="sans-serif" line-height="125%" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="127.18195" x="763.01331" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">h(x)</tspan></text>
+<g font-size="15px" font-family="sans-serif" fill="#6e6e6e">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="236.7899" x="959.27789" line-height="125%"><tspan y="236.7899" x="959.27789">2</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="1021.6359" xml:space="preserve"><tspan y="236.7899" x="1021.6359">3</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="173.46127" x="831.63593" line-height="125%"><tspan y="173.46127" x="831.63593">1</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="46.789349" x="831.63593" xml:space="preserve"><tspan y="46.789349" x="831.63593">3</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="110.33039" x="831.63593" line-height="125%"><tspan y="110.33039" x="831.63593">2</tspan></text>
+</g>
+<g fill="#aaa">
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="898.65" cy="167.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="104.3" cx="962.65" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="1025.7" cy="41.302" r="6"/>
+</g>
+<g fill="#6e6e6e">
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" height="200" width="1" y="21.042" x="1426"/>
+<rect style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" transform="rotate(90)" height="200" width="1" y="-1618" x="211.04"/>
+<text font-size="15px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.78992" x="1404.0198" font-family="sans-serif" xml:space="preserve"><tspan y="236.78992" x="1404.0198">0</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="15px" y="236.7899" x="1466.7612" font-family="sans-serif" line-height="125%"><tspan y="236.7899" x="1466.7612">1</tspan></text>
+</g>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="278.00238" x="1513.6193" font-family="sans-serif" line-height="125%" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="278.00238" x="1513.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan style="baseline-shift:sub" font-size="65%">1</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="127.18195" x="1333.0133" font-family="sans-serif" xml:space="preserve" fill="#dcdcdc"><tspan font-size="20px" font-style="italic" y="127.18195" x="1333.0133" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">J(θ<tspan style="baseline-shift:sub" font-size="65%">1</tspan>)</tspan></text>
+<g font-size="15px" font-family="sans-serif" fill="#6e6e6e">
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="1529.0046" xml:space="preserve"><tspan y="236.7899" x="1529.0046">2</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="236.7899" x="1591.6362" line-height="125%"><tspan y="236.7899" x="1591.6362">3</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="173.46127" x="1401.636" xml:space="preserve"><tspan y="173.46127" x="1401.636">1</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="46.789349" x="1401.636" line-height="125%"><tspan y="46.789349" x="1401.636">3</tspan></text>
+<text line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="110.33039" x="1401.636" xml:space="preserve"><tspan y="110.33039" x="1401.636">2</tspan></text>
+</g>
+<g fill="#aaa">
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="211.3" cx="1470.7" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="1445.7" cy="180.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="84.302" cx="1425.7" r="6"/>
+</g>
+<g font-family="sans-serif" fill="#6e6e6e">
+<text font-size="11.25px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="1432.7218" xml:space="preserve"><tspan y="236.7899" x="1432.7218" font-size="11.25px">0.5</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="15px" y="236.7899" x="1492.4159" line-height="125%"><tspan y="236.7899" x="1492.4159" font-size="11.25px">1.5</tspan></text>
+<text font-size="15px" line-height="125%" style="word-spacing:0px;letter-spacing:0px" y="236.7899" x="1556.0914" xml:space="preserve"><tspan y="236.7899" x="1556.0914" font-size="11.25px">2.5</tspan></text>
+</g>
+<path d="m856.37 211.95 204.33-204.36" stroke="#aaa" stroke-dasharray="3.00000849, 3.00000849" fill="none"/>
+<path d="m856.22 211.85 242.78-107.84" stroke="#aaa" stroke-dasharray="3.00000849, 3.00000849" fill="none"/>
+<g font-family="sans-serif" fill="#dcdcdc">
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="-1.9984665" x="1073.6193" xml:space="preserve"><tspan font-style="italic" y="-1.9984665" x="1073.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 1</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="105.00186" x="1108.6193" line-height="125%"><tspan font-style="italic" y="105.00186" x="1108.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 0.5</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="215.0022" x="1110.6193" xml:space="preserve"><tspan font-style="italic" y="215.0022" x="1110.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 0</tspan></tspan></text>
+</g>
+<g stroke="#aaa" stroke-width="2" fill="none">
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="197.3" cx="1455.7" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="1488.7" cy="197.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="136.3" cx="1433.7" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="179.3" cx="1499.7" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="1513.7" cy="136.3" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="86.302" cx="1523.7" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cx="1539.7" cy="-3.6984" r="6"/>
+<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" cy="-3.6984" cx="1410.7" r="6"/>
+</g>
+<g font-family="sans-serif" fill="#dcdcdc">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="216.0022" x="1483.6193" line-height="125%"><tspan font-style="italic" y="216.0022" x="1483.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 1</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="169.00204" x="1448.6193" xml:space="preserve"><tspan font-style="italic" y="169.00204" x="1448.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 0.5</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="88.001801" x="1439.6193" line-height="125%"><tspan font-style="italic" y="88.001801" x="1439.6193" font-family="&apos;Century Schoolbook L&apos;" fill="#dcdcdc">θ<tspan><tspan style="baseline-shift:sub" font-size="65%">1</tspan> = 0</tspan></tspan></text>
+</g>
+</g>
+</svg>
